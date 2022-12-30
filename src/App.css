@@ -4,3 +4,7 @@
   --blackColor: #000;
   --lightDark: #222;
 }
+
+.bannar {
+  background-image: url(../src/assets/img/herobannar.jpg);
+}
