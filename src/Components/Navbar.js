@@ -10,8 +10,8 @@ const Navbar = () => {
         <nav>
           <ul>
             <li>
-              <i class="fas fa-cart-plus text-slate-900 text-xl"></i>{" "}
-              <span class="bg-[#f57224] px-1 rounded-full mb-3 text-sm text-white">
+              <i className="fas fa-cart-plus text-slate-900 text-xl"></i>{" "}
+              <span className="bg-[#f57224] px-1 rounded-full mb-3 text-sm text-white">
                 0
               </span>
             </li>
