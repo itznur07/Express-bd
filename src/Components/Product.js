@@ -7,9 +7,9 @@ const Product = () => {
   return (
     <>
       <div className="mx-14">
-        <div className="flex items-center justify-between space-y-6 my-8 flex-wrap">
+        <div className="flex items-center justify-between space-y-6 my-8 flex-wrap sm:space-x-2">
           {products.map((product) => (
-            <div key={product.id} className="w-52 shadow rounded ">
+            <div key={product.id} className="w-52 shadow rounded lg:w-72 ">
               <img src={product.image} alt="not found" />
               <div className="text-center my-4">
                 <h1 className="text-medium text-lg">{product.name}</h1>
