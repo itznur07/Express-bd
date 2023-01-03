@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom';
 import "./App.css";
 import Bannar from "./Components/Bannar";
 import Navbar from "./Components/Navbar";
@@ -7,10 +8,12 @@ import ProductContextProvider from "./Context/ProductContextProvider";
 function App() {
   return (
     <div className="App">
+      <ProductContextProvider>
       <Navbar />
       <Bannar />
-      <ProductContextProvider>
-        <Product />
+      <Routes>
+        <Route path='/' element={<Product />} />
+      </Routes>
       </ProductContextProvider>
     </div>
   );
