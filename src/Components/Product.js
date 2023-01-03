@@ -23,7 +23,7 @@ const Product = () => {
                   ${product.price}
                 </h1>
               </div>
-              <button onClick={() => dispatch({type: 'add_to_cart'})} className="w-full text-center px-6 py-1 bg-[#f57224] my-1 ">
+              <button onClick={() => dispatch({ type : 'add_to_cart', id: product.id, product: product})} className="w-full text-center px-6 py-1 bg-[#f57224] my-1 ">
                 Add to Cart
               </button>
             </div>
