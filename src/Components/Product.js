@@ -1,9 +1,13 @@
 import React, { useContext } from "react";
+import { cartContext } from "../Context/CartContextProvider";
 import { ProductContext } from "../Context/ProductContextProvider";
 import Bannar from './Bannar';
 
 const Product = () => {
+
   const { products } = useContext(ProductContext);
+
+  const {dispatch} = useContext(cartContext)
 
   return (
     <>
@@ -19,7 +23,7 @@ const Product = () => {
                   ${product.price}
                 </h1>
               </div>
-              <button className="w-full text-center px-6 py-1 bg-[#f57224] my-1 ">
+              <button onClick={() => dispatch({type: 'add_to_cart'})} className="w-full text-center px-6 py-1 bg-[#f57224] my-1 ">
                 Add to Cart
               </button>
             </div>
