@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import "./App.css";
-import Bannar from "./Components/Bannar";
+import Carts from './Components/Carts';
 import Navbar from "./Components/Navbar";
 import Product from "./Components/Product";
 import ProductContextProvider from "./Context/ProductContextProvider";
@@ -10,9 +10,9 @@ function App() {
     <div className="App">
       <ProductContextProvider>
       <Navbar />
-      <Bannar />
       <Routes>
         <Route path='/' element={<Product />} />
+        <Route path='/cart' element={<Carts />} />
       </Routes>
       </ProductContextProvider>
     </div>

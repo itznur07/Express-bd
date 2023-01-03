@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import { ProductContext } from "../Context/ProductContextProvider";
+import Bannar from './Bannar';
 
 const Product = () => {
   const { products } = useContext(ProductContext);
 
   return (
     <>
+      <Bannar />
       <div className="mx-14">
         <div className="flex items-center justify-between space-y-6 my-8 flex-wrap sm:space-x-2">
           {products.map((product) => (
