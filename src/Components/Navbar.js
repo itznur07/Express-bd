@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from 'react-router-dom';
+import { cartContext } from '../Context/CartContextProvider';
+
 
 const Navbar = () => {
+  
+  const {cart} = useContext(cartContext)
+  const {shoppingCart} = cart
+
   return (
     <>
       <div className="flex items-center justify-between px-14 py-4 shadow-sm shadow-slate-200">
@@ -13,7 +19,7 @@ const Navbar = () => {
             <Link to='/cart'>
               <i className="fas fa-cart-plus text-slate-900 text-xl"></i>{" "}
               <span className="bg-[#f57224] px-1 rounded-full mb-3 text-sm text-white">
-                0
+                {shoppingCart.length}
               </span>
             </Link>
           </ul>
